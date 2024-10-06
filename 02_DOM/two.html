@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: whitesmoke;">
+    <ul class="languages">
+        <li class="item">C++</li>
+    </ul>
+</body>
+<script>
+    // const h1 = document.createElement('h2')
+    // console.log(h1)
+    // // h1.setAttribute('class',"heading")
+    // h1.className = 'head'
+    // h1.id = '_id'
+    // h1.innerHTML = `Welcome 
+    // to <h2>h1</h2> created through js`
+    // document.body.append(h1)
+    
+    function addLangs(Lname){
+        const ul = document.querySelector(".languages")
+        const l1 = document.createElement("li")
+        // l1.setAttribute("class", "item")
+        // l1.innerHTML=`${Lname}`
+        l1.appendChild(document.createTextNode(Lname))
+        ul.appendChild(l1)
+    }
+    addLangs("Javascript")
+    addLangs("Python")
+
+    // Edit
+    const secondLang = document.querySelector("li:nth-child(2)")
+    // console.log(secondLang)
+    // secondLang.innerHTML = "Mojo"
+    const newLi = document.createElement("li")
+    newLi.textContent = "Mojo"
+    secondLang.replaceWith(newLi)
+
+    const first = document.querySelector("li")
+    first.outerHTML = `<li>TypeScript</li>`
+
+    // remove
+    const th = document.querySelector("li:last-child")
+    th.remove()
+</script>
+</html>
